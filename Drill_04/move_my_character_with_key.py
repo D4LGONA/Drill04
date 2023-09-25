@@ -92,7 +92,11 @@ while running:
     if state != 'dizzy':
         frame = (frame + 1) % 4
         x += dirX * 5
+        if x >= TUK_WIDTH or x <= 0:
+            x -= dirX * 5
         y += dirY * 5
+        if y >= TUK_HEIGHT or y <= 0:
+            y -= dirY * 5
     else:
         frame = (frame + 1) % 6
     delay(0.1)
