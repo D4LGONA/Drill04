@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a7f858-cf45-42e7-940d-975400e1a391" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture 6/character_runs_esc.py" beforeDir="false" afterPath="$PROJECT_DIR$/lecture 6/character_runs_esc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecture 6/move_character_with_key.py" beforeDir="false" afterPath="$PROJECT_DIR$/lecture 6/move_character_with_key.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,16 +136,5 @@
       <updated>1695607553420</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/lecture 6/move_character_with_key.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
