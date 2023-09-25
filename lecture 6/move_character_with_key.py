@@ -15,9 +15,9 @@ def handle_events():
             running = False
         elif event.type == SDL_KEYDOWN:
             if event.key == SDLK_RIGHT:
-                dir += 1
+                dir += 1 # 이게 정말 쩌는 군
             elif event.key == SDLK_LEFT:
-                dir -= 1
+                dir -= 1 # 생각해 본 적이 없어
             elif event.key == SDLK_ESCAPE:
                 running = False
         elif event.type == SDL_KEYUP:
