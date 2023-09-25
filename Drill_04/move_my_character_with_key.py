@@ -7,7 +7,7 @@ character = load_image('sprite.png')
 
 
 def handle_events():
-    global running, dirX, dirY, state, frameX
+    global running, dirX, dirY
     events = get_events()
     for event in events:
         if event.type == SDL_QUIT:
@@ -37,8 +37,7 @@ state = 'idle'
 dirX = 0
 dirY = 0
 running = True
-frameX = 0
-frameY = 0
+frame = 0
 x, y = TUK_WIDTH // 2, TUK_HEIGHT // 2
 count = 0
 
@@ -74,21 +73,28 @@ while running:
 
     tuk_ground.draw(TUK_WIDTH // 2, TUK_HEIGHT // 2)
     if state == 'idle':
-        character.clip_draw(frameX * 80, 356, 80, 42, x, y)
+        character.clip_draw(frame * 80, 356, 80, 42, x, y)
     elif state == 'right':
-        character.clip_draw(frameX * 108, 356 - 42, 104, 42, x, y)
+        character.clip_draw(frame * 108, 356 - 42, 104, 42, x, y)
     elif state == 'left':
-        character.clip_draw(frameX * 108, 356 - 42, 104, 42, x, y)
+        character.clip_draw(frame * 108, 356 - 42, 104, 42, x, y)
     elif state == 'up':
-        character.clip_draw(frameX * 50, 356 - 42 - 73, 50, 72, x, y)
+        character.clip_draw(frame * 50, 356 - 42 - 73, 50, 72, x, y)
+    elif state == 'down':
+        character.clip_draw(frame * 50, 356 - 42 - 73 - 73, 50, 72, x, y)
+    elif state == 'dizzy':
+        character.clip_draw(frame * 85, 356 - 42 - 73 - 73 - 50, 85, 50, x, y)
 
 
     update_canvas()
     handle_events()
-    frameX = (frameX + 1) % 4
+
     if state != 'dizzy':
+        frame = (frame + 1) % 4
         x += dirX * 5
         y += dirY * 5
+    else:
+        frame = (frame + 1) % 6
     delay(0.1)
 
 close_canvas()
